@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandidateFinder.UI", "CandidateFinder\CandidateFinder.UI.csproj", "{A7E6A5F4-09CF-474D-A319-04EB65BE6991}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandidateFinder.ApiClient", "CandidateFinder.ApiClient\CandidateFinder.ApiClient.csproj", "{1BE352C7-4C1B-4AF2-85DE-350C0EE389BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7E6A5F4-09CF-474D-A319-04EB65BE6991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E6A5F4-09CF-474D-A319-04EB65BE6991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E6A5F4-09CF-474D-A319-04EB65BE6991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E6A5F4-09CF-474D-A319-04EB65BE6991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE352C7-4C1B-4AF2-85DE-350C0EE389BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE352C7-4C1B-4AF2-85DE-350C0EE389BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE352C7-4C1B-4AF2-85DE-350C0EE389BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE352C7-4C1B-4AF2-85DE-350C0EE389BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {805CDB66-CBC1-419C-AB5C-E409A2A7F5A4}
+	EndGlobalSection
+EndGlobal
