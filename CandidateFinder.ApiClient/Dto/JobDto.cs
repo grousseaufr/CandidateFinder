@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace CandidateFinder.ApiClient
+namespace CandidateFinder.ApiClient.Dto
 {
     [DataContract]
-    public class Job
+    public class JobDto
     {
         [DataMember(Name = "jobId")]
         public int Id { get; set; }

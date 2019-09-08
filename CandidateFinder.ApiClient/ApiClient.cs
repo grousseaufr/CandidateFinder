@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CandidateFinder.ApiClient
 {
-    public class ApiClient<T>
+    public abstract class ApiClient<T>
     {
-        private HttpClient httpClient;
         protected string requestUri;
+        private HttpClient httpClient;
         private string baseAddress = "http://private-76432-jobadder1.apiary-mock.com/";
 
         public ApiClient()

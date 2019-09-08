@@ -11,7 +11,16 @@ namespace CandidateFinder.Controllers
 {
     public class HomeController : Controller
     {
-        public async Task<IActionResult> Index(CandidateApiClient candidateApiClient, JobApiClient jobApiClient)
+        private readonly CandidateApiClient candidateApiClient;
+        private readonly JobApiClient jobApiClient;
+
+        public HomeController(CandidateApiClient candidateApiClient, JobApiClient jobApiClient)
+        {
+            this.candidateApiClient = candidateApiClient;
+            this.jobApiClient = jobApiClient;
+        }
+
+        public async Task<IActionResult> Index()
         {
             var candidates = await candidateApiClient.Get();
             var jobs = await jobApiClient.Get();

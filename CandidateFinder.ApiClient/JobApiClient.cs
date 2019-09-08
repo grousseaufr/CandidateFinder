@@ -1,12 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using CandidateFinder.ApiClient.Dto;
 
 namespace CandidateFinder.ApiClient
 {
-    public class JobApiClient : ApiClient<Job>
+    public class JobApiClient : ApiClient<JobDto>
     {
         public JobApiClient()
         {
