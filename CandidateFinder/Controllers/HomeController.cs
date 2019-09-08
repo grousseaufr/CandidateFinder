@@ -12,19 +12,8 @@ namespace CandidateFinder.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly CandidateServices candidateServices;
-        private readonly JobServices jobServices;
-
-        public HomeController(CandidateServices candidateServices, JobServices jobServices)
-        {
-            this.candidateServices = candidateServices;
-            this.jobServices = jobServices;
-        }
-
-        public async Task<IActionResult> Index()
-        {
-            var candidates = await candidateServices.GetAll();
-            var jobs = await jobServices.GetAll();
+        public IActionResult Index()
+        { 
             return View();
         }
 
