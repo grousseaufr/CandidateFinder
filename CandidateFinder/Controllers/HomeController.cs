@@ -6,24 +6,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CandidateFinder.Models;
 using CandidateFinder.ApiClient;
+using CandidateFinder.BusinessLayer.Services;
 
 namespace CandidateFinder.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly CandidateApiClient candidateApiClient;
-        private readonly JobApiClient jobApiClient;
+        private readonly CandidateServices candidateServices;
+        private readonly JobServices jobServices;
 
-        public HomeController(CandidateApiClient candidateApiClient, JobApiClient jobApiClient)
+        public HomeController(CandidateServices candidateServices, JobServices jobServices)
         {
-            this.candidateApiClient = candidateApiClient;
-            this.jobApiClient = jobApiClient;
+            this.candidateServices = candidateServices;
+            this.jobServices = jobServices;
         }
 
         public async Task<IActionResult> Index()
         {
-            var candidates = await candidateApiClient.Get();
-            var jobs = await jobApiClient.Get();
+            var candidates = await candidateServices.GetAll();
+            var jobs = await jobServices.GetAll();
             return View();
         }
 
