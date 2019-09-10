@@ -3,13 +3,15 @@
     ViewData["Title"] = "Job list";
 }
 
-@model List<CandidateFinder.BusinessLayer.Models.Job>
+@model CandidateFinder.UI.Models.JobIndexViewModel
 
-<h1>Current open jobs</h1>
+<h1>Current jobs</h1>
 
 <div class="job-list">
-    @foreach (var job in Model)
+    <h2>Select a job to find most qualified candidates</h2>
+
+    @foreach (var job in Model.Jobs)
     {
-        <div>@job.Name</div>
+        @Html.ActionLink(string.Format("{0} at {1}", job.Name, job.Company), "Details", new { id = job.Id })
     }
 </div>

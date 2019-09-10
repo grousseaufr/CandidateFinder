@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandidateFinder.ApiClient",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateFinder.BusinessLayer", "CandidateFinder.BusinessLayer\CandidateFinder.BusinessLayer.csproj", "{7FE4D80B-464E-49D7-910E-594B23AE209A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateFinder.Tests", "CandidateFinder.Tests\CandidateFinder.Tests.csproj", "{65DC6B56-0B22-4142-A552-971325EBAFDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7FE4D80B-464E-49D7-910E-594B23AE209A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FE4D80B-464E-49D7-910E-594B23AE209A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FE4D80B-464E-49D7-910E-594B23AE209A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65DC6B56-0B22-4142-A552-971325EBAFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65DC6B56-0B22-4142-A552-971325EBAFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65DC6B56-0B22-4142-A552-971325EBAFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65DC6B56-0B22-4142-A552-971325EBAFDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

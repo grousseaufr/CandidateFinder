@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Job details";
+}
+
+@model CandidateFinder.UI.Models.JobDetailsViewModel
+
+<h1>Job details</h1>
+
+<div>
+    @Html.Raw("Role: ")
+    @Html.DisplayFor(d => d.Job.Name)
+</div>
+
+<div>
+    @Html.Raw("Company: ")
+    @Html.DisplayFor(d => d.Job.Company)
+    </div>
+
+<div>
+    @Html.Raw("Skills: ")
+    @Html.Raw(string.Join(", ", Model.Job.Skills))
+</div>
+
+<div class="candidate-list">
+    <h2>@string.Format("Here are the {0} best candidates found (with at least 2 matching skills) :", Model.Candidates.Count)</h2>
+
+    @foreach (var candidate in Model.Candidates)
+    {
+<div class="candidate">
+    <div>
+        @Html.Raw("Name: ")
+        @Html.Raw(candidate.Name)
+    </div>
+
+    <div>
+        @Html.Raw("Score: ")
+        @Html.DisplayFor(d => candidate.Score)
+    </div>
+
+    <div>
+        @Html.Raw("Matching skills: ")
+        @Html.DisplayFor(d => candidate.MatchingSkillsCount)
+    </div>
+
+    <div>
+        @Html.Raw("Candidate Skills: ")
+        @for (int i = 0; i < candidate.Skills.Count; i++)
+        {
+            if (Model.Job.Skills.Contains(candidate.Skills[i]))
+            {
+                <b>@Html.Raw(candidate.Skills[i])</b>
+            }
+            else
+            {
+                @Html.Raw(candidate.Skills[i])
+            }
+
+            if (i < candidate.Skills.Count - 1)
+            {
+                @Html.Raw(", ")
+            }
+        }
+    </div>
+    <div>
+        @Html.Raw("Skills vs job skills : ")
+        @for (int i = 0; i < Model.Job.Skills.Count; i++)
+        {
+            if (candidate.Skills.Contains(Model.Job.Skills[i]))
+            {
+                <b>@Html.Raw(Model.Job.Skills[i])</b>
+            }
+            else
+            {
+                @Html.Raw(Model.Job.Skills[i])
+            }
+
+            if (i < Model.Job.Skills.Count - 1)
+            {
+                @Html.Raw(", ")
+            }
+        }
+    </div>
+</div>
+    }
+</div>
+
+

@@ -1,5 +1,6 @@
-﻿using CandidateFinder.ApiClient;
+﻿using CandidateFinder.ApiClient.Client.Implementation;
 using CandidateFinder.BusinessLayer.Services;
+using CandidateFinder.UI.ModelsBuilder;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,11 +29,11 @@ namespace CandidateFinder
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddScoped<CandidateApiClient>();
-            services.AddScoped<JobApiClient>();
-            services.AddScoped<CandidateServices>();
-            services.AddScoped<JobServices>();
-
+            services.AddSingleton<CandidateApiClient>();
+            services.AddSingleton<JobApiClient>();
+            services.AddScoped<JobViewModelBuilder>();
+            services.AddSingleton<CandidateServices>();
+            services.AddSingleton<JobServices>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
