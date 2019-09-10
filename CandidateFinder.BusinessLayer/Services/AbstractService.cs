@@ -7,10 +7,10 @@ namespace CandidateFinder.BusinessLayer.Services
 {
     public abstract class AbstractService<T, Tdto> where T:class where Tdto : class
     {
-        private readonly IApiClient<Tdto> apiClient;
+        private readonly ApiClient<Tdto> apiClient;
         private List<T> items;
 
-        public AbstractService(IApiClient<Tdto> apiClient)
+        public AbstractService(ApiClient<Tdto> apiClient)
         {
             this.apiClient = apiClient;
         }

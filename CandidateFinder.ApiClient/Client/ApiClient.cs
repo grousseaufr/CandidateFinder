@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CandidateFinder.ApiClient.Client
 {
-    public abstract class ApiClient<T> : IApiClient<T>
+    public abstract class ApiClient<T>
     {
         protected string requestUri;
         private HttpClient httpClient;
