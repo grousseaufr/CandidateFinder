@@ -1,4 +1,4 @@
-﻿using CandidateFinder.ApiClient;
+﻿using CandidateFinder.ApiClient.Client.Implementation;
 using CandidateFinder.ApiClient.Dto;
 using CandidateFinder.BusinessLayer.Models;
 using System.Linq;
@@ -27,6 +27,5 @@ namespace CandidateFinder.BusinessLayer.Services
             return null;
         }
 
-        
     }
 }

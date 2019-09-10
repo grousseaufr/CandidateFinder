@@ -1,8 +1,9 @@
-﻿using CandidateFinder.ApiClient;
+﻿using CandidateFinder.ApiClient.Client.Implementation;
 using CandidateFinder.ApiClient.Dto;
 using CandidateFinder.BusinessLayer.Models;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace CandidateFinder.BusinessLayer.Services
 {
@@ -28,6 +29,10 @@ namespace CandidateFinder.BusinessLayer.Services
             return null;
         }
 
-        
+        public async Task<Job> GetById(int id)
+        {
+            var jobs = await GetAll();
+            return jobs.FirstOrDefault(s => s.Id == id);
+        }
     }
 }
