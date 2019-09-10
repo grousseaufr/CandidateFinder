@@ -1,4 +1,4 @@
-﻿using CandidateFinder.BusinessLayer;
+﻿using CandidateFinder.BusinessLayer.Helper;
 using CandidateFinder.BusinessLayer.Services;
 using CandidateFinder.UI.Models;
 using System.Linq;

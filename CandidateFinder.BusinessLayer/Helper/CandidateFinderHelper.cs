@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CandidateFinder.BusinessLayer
+namespace CandidateFinder.BusinessLayer.Helper
 {
     public static class CandidateFinderHelper
     {
@@ -32,14 +32,14 @@ namespace CandidateFinder.BusinessLayer
         {
             SkillResult skillResult = new SkillResult();
 
-            foreach(var jobSkill in jobSkills)
+            foreach (var jobSkill in jobSkills)
             {
                 //Check if candidate has this skill
                 var matchSkill = candidateSkills.FirstOrDefault(f => f.Name == jobSkill.Name);
 
-                if(matchSkill != null)
+                if (matchSkill != null)
                 {
-                    skillResult.Score += Math.Round(jobSkill.Weight * (matchSkill.Weight/100), 2);
+                    skillResult.Score += Math.Round(jobSkill.Weight * (matchSkill.Weight / 100), 2);
                     skillResult.MatchCount++;
                 }
             }

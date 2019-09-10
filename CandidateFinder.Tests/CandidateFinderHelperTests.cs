@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
-using CandidateFinder.BusinessLayer;
+using CandidateFinder.BusinessLayer.Helper;
 
 namespace Tests
 {

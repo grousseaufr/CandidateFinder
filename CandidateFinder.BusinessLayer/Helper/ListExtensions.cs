@@ -2,9 +2,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace CandidateFinder.BusinessLayer
+namespace CandidateFinder.BusinessLayer.Helper
 {
-    public static class ListExtensions{
+    public static class ListExtensions
+    {
 
         /// <summary>
         /// Add a weight on each item of the list. First one is the heaviest with a value of 100.
@@ -35,7 +36,7 @@ namespace CandidateFinder.BusinessLayer
 
         private static double GetPercentage(int index, int total)
         {
-            return (double)100 / (double)total * index;
+            return 100 / (double)total * index;
         }
     }
 }
