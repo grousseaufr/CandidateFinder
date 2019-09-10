@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace CandidateFinder.ApiClient
+namespace CandidateFinder.ApiClient.Client
 {
     public abstract class ApiClient<T> : IApiClient<T>
     {

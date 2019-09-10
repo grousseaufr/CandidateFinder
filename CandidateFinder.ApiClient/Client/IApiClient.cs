@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CandidateFinder.ApiClient
+namespace CandidateFinder.ApiClient.Client
 {
     public interface IApiClient<T>
     {

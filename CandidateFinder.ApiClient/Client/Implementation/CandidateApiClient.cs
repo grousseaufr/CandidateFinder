@@ -1,6 +1,7 @@
-﻿using CandidateFinder.ApiClient.Dto;
+﻿using CandidateFinder.ApiClient.Client;
+using CandidateFinder.ApiClient.Dto;
 
-namespace CandidateFinder.ApiClient
+namespace CandidateFinder.ApiClient.Client.Implementation
 {
     public class CandidateApiClient : ApiClient<CandidateDto>
     {
