@@ -14,4 +14,4 @@ Contains 4 projects :
  - candidate skills are decreasing from strongest to weakest linearly
  - job skills are decreasing from most relevant to less relevant linearly
  
- To test the website, simple build and run with VisualStudio
+ To test the website, simply build and run with VisualStudio
